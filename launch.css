@@ -1,0 +1,236 @@
+.main{
+   
+    background-color :rgb(190, 241, 236);
+}
+.body{
+    margin :0;
+}
+.one{
+    height : 9vh;
+    background-color :aliceblue;
+    display : flex;
+    
+    justify-content: center;
+   
+    box-shadow:  1px 8px 7px rgb(35, 52, 58);
+    
+}
+.two{
+    
+    display :flex;
+    justify-content: center;
+    height:88vh;
+    }
+.text{
+    font-size: 5vh;
+    font-family: 'Roboto';
+    margin-top:1.5vh;
+    
+}
+.two-one,.two-two,.two-three{
+        padding:30px;
+        margin:20px;
+}
+.two-two,.two-three{
+        display:inline-block;
+        background-color: rgb(255, 255, 255);
+        width:200px; 
+        
+        text-align:center;
+        justify-content:center;
+        vertical-align:middle;
+        align-items:center;
+}
+.two-two{
+    margin-top:14vh;
+    height:320px;
+    width:200px;
+    border-radius:10px;
+    background-size: 350px;
+    box-shadow:  1px 1px 7px 7px rgb(100, 107, 109);
+}
+.two-three{
+    margin-top:14vh;
+    height:320px;
+    width:400px;
+    border-radius:10px;
+    background-size: 350px;
+    box-shadow:  1px 1px 7px 7px rgb(100, 107, 109);
+    
+}
+.two-one{
+    background-color: rgb(190, 241, 236);
+    margin-top:5vh;
+    height:350px;
+    width:200px; 
+    border-radius:25px;
+    text-align:center;
+    justify-content:center;
+    vertical-align:middle;
+    align-items:center;
+    display:flex;
+   flex-direction: column;
+   justify-content: space-between;
+    
+}
+.images,.delete,.logs,.execute,.help{
+    margin-bottom :40px;
+    height : 1000vh;
+    width : 30vh;
+    border-radius :10px;
+    border-color:white;
+    background-color:white;
+    color : rgb(19, 92, 92);
+    font-size: 20px;
+    font-family:'Roboto';
+    cursor:pointer;
+    box-shadow:5px 5px 0px 0px rgb(93, 139, 160);
+}
+.images:hover{
+    background-size: 250px;
+    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+}
+.delete:hover{
+    background-size: 250px;
+    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+}
+.logs:hover{
+    background-size: 250px;
+    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+}
+.execute:hover{
+    background-size: 250px;
+    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+}
+.help:hover{
+    background-size: 250px;
+    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+}
+
+
+
+.launch{
+    
+    margin-bottom:40px;
+    height : 1000vh;
+    width : 30vh;
+    cursor:pointer;
+    border-radius :10px;
+    border-color:rgb(0, 0, 0);
+    background-color:rgb(0, 0, 0);
+    color : rgb(255, 255, 255);
+    font-size: 20px;
+    font-family:'Roboto';
+    box-shadow: 5px 5px 0px 0px rgb(80, 96, 104);;
+}
+.launch:hover {
+    background-size: 250px;
+    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+  }
+  .pullimage:hover{
+    background-size: 250px;
+    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+  }
+  .del:hover{
+    background-size: 250px;
+    box-shadow: 0px 0px 5px 5px rgb(116, 2, 2);
+
+  }
+
+.second-two,.second-three{
+    background-color:rgb(190, 241, 236);
+    height: 20vh;
+    width:30vh;
+    background-size: 250px;
+    box-shadow:  1px 1px 1px 1px rgb(130, 188, 204);
+}
+.show:hover{
+    background-size: 250px;
+    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+}
+.show{
+    margin-top :0vh;
+    height : 7vh;
+    width : 30vh;
+    border-radius :10px;
+    border-color:rgb(255, 255, 255);
+    background-color:rgb(255, 255, 255);
+    color :  rgb(19, 92, 92);
+    font-size: 20px;
+    font-family:'Roboto';
+    cursor:pointer;
+    box-shadow: 5px 5px 0px 0px rgb(93, 139, 160);;
+}
+.second-two{
+    background-color:rgb(190, 241, 236);
+    margin-top:15px;
+    margin-left:10px;
+    border-radius:10px;
+
+}
+.second-three{
+    margin-top:15px;
+    background-color:rgb(190, 241, 236);
+    margin-left:10px;
+    border-radius:10px;
+}
+.pull,.delet{
+    color:black;
+    font-family:'Roboto';
+    font-size:4vh;
+}
+
+input{
+    width:20vh;
+    height:5vh;
+    margin-top:10px;
+    border-radius:7px;
+    font-family: 'Roboto';
+    font-size:15px;
+    font-weight:bold ;
+    border-color: rgb(255, 255, 255);
+    color:rgba(190, 190, 190, 0.863);
+}
+.output{
+    width:65vh;
+    height:52vh;
+    margin-top:0px;
+    border-radius:7px;
+    font-family: 'Roboto';
+    font-size:15px;
+    font-weight:bold ;
+    background-color:rgb(190, 241, 236);
+    border-color: rgb(255, 255, 255);
+    color:black;
+    text-align:center;
+}
+.pullimage{
+    width:20vh;
+    height:5vh;
+    margin-top:10px;
+    border-radius:7px;
+    font-family: 'Roboto';
+    font-size:15px;
+    font-weight:bold ;
+    background-color: black;
+    color:white;
+    cursor:pointer;
+    box-shadow: 5px 5px 0px 0px rgb(75, 81, 83);
+}
+.del{
+    width:20vh;
+    height:5vh;
+    margin-top:10px;
+    border-radius:7px;
+    font-family: 'Roboto';
+    font-size:15px;
+    font-weight:bold ;
+    background-color: rgb(255, 23, 23);
+    color:white;
+    cursor:pointer;
+    box-shadow: 5px 5px 0px 0px rgb(75, 81, 83);
+
+}
+
+
+

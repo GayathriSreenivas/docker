@@ -73,7 +73,7 @@
    justify-content: space-between;
     
 }
-.images,.delete,.logs,.execute,.help{
+.images,.delete,.launch,.execute,.help{
     margin-top:14px;
     margin-bottom:30px;
     height : 1000vh;
@@ -110,7 +110,7 @@
 
 
 
-.launch{
+.logs{
     margin-top:14px;
     margin-bottom:30px;
     height : 5vh;
@@ -128,7 +128,7 @@
 margin-bottom:40px;
 margin-top:3vh;
 height : 5vh;
-width : 20vh;
+width : 25vh;
 cursor:pointer;
 border-radius :10px;
 border-color:rgb(0, 0, 0);
@@ -158,9 +158,10 @@ box-shadow: 5px 5px 0px 0px rgb(80, 96, 104);;
 
   }
 
-.second-two,.second-three{
+.second-two{
+    margin-bottom: 2vh;
     background-color:rgb(190, 241, 236);
-    height: 50vh;
+    height: 27vh;
     width:30vh;
     background-size: 250px;
     box-shadow:  1px 1px 1px 1px rgb(130, 188, 204);
@@ -202,9 +203,9 @@ box-shadow: 5px 5px 0px 0px rgb(80, 96, 104);;
 }
 
 input{
-    width:27vh;
+    width:25vh;
     height:5vh;
-    margin-top:10px;
+    margin-top:15px;
     border-radius:7px;
     font-family: 'Roboto';
     font-size:15px;

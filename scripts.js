@@ -1,8 +1,5 @@
-
-
-
-
 function dele(){
+    var rev =document.getElementById('deleteimage');
     var loading =document.getElementById("load");
     loading.style.display="block";
         var n = document.getElementById('dele');
@@ -27,6 +24,7 @@ function dele(){
             n.style.backgroundColor = "red";
             n.style.color="white";
             loading.style.display="none";
+            rev.value="";
            
         })
         var gs1 =fetch('http://127.0.0.1:5000/showrevert');
@@ -38,6 +36,8 @@ function dele(){
         })
 
 }
+
+///////launching////////////
 
 function laun(){
     var loading =document.getElementById("load");
@@ -70,10 +70,19 @@ function laun(){
                 gs5.innerHTML = res.message;
                 gs1.innerHTML = "launch";
                 loading.style.display="none";
+                document.getElementById('runimage').value="";
+                document.getElementById("containername").value="";
+                document.getElementById("hostport").value="";
+                document.getElementById("containerport").value="";
+                document.getElementById("volumepath").value="";
                 
+
             })
 
 }
+
+//////////////deleting all/////////////////////
+
 function dea(){
     var loading =document.getElementById("load");
     loading.style.display="block";
@@ -92,6 +101,7 @@ function dea(){
             n.style.color = "white";
             n.innerHTML='delete all';
             loading.style.display="none";
+            document.getElementById('deletename').value="";
            
         })
         var gs2=fetch('http://127.0.0.1:5000/stoprevert') ;
@@ -108,6 +118,10 @@ function dea(){
         
     })
 }
+
+////////deleting an image/////////////////
+
+
 function deletes(){
     var loading =document.getElementById("load");
     loading.style.display="block";
@@ -133,7 +147,7 @@ function deletes(){
         n.style.backgroundColor = "red";
         n.style.color = "white";
         loading.style.display="none";
-       
+        document.getElementById('deletename').value="";
     })
 
     var gs1=fetch('http://127.0.0.1:5000/stoprevert') ;
@@ -149,6 +163,8 @@ function deletes(){
     document.getElementById('dea').style.backgroundColor = "red";
     document.getElementById('dea').style.color = "white";
 }
+
+///////////////////view logs////////////////////
 
 function view(){
     var loading =document.getElementById("load");
@@ -169,7 +185,7 @@ function view(){
     gs.then(res => res.json()).then(res=>{
         console.log(res);
         if(res.message==''){
-            var mes = "Nologs";
+            var mes = "No logs";
         }
         else{
             var mes =res.message;
@@ -178,11 +194,16 @@ function view(){
             gs2.innerHTML = mes;
             n.innerHTML = "view logs";
             loading.style.display="none";
+            document.getElementById("logs").value="";
        
     })
    
 
 }
+
+
+/////////--help command /////////
+
 function helpp(){
     var loading = document.getElementById("load");
     loading.style.display="block";
@@ -220,6 +241,10 @@ function helpp(){
     })
 
 }
+
+//////////////////container statuses//////////////////////
+
+
 function status(){
     var loading =document.getElementById("load");
     loading.style.display="block";
@@ -243,6 +268,10 @@ function status(){
             loading.style.display="none";
     })
 }
+
+///////////////////show containers///////////////////
+
+
 function show(){
     var loading =document.getElementById("load");
     loading.style.display="block";
@@ -281,6 +310,8 @@ function show(){
 
 }
 
+///////////////////////stoping the container//////////////////////
+
 function stop(){
     var loading =document.getElementById("load");
     loading.style.display="block";
@@ -305,6 +336,7 @@ function stop(){
         gs5.innerHTML = res.msg;
         gs1.innerHTML = "stop";
         loading.style.display="none";
+        document.getElementById("stopcont").value="";
         
     })
     
@@ -327,6 +359,10 @@ function stop(){
 
 
 }
+
+
+////////////////////////executing ////////////////
+
 
 function exec(){
     var loading=document.getElementById("load");
@@ -359,14 +395,18 @@ function exec(){
             gs2.innerHTML = content;
             gs4.innerHTML="execute";
             loading.style.display="none";
+            document.getElementById("execname").value="";
+            document.getElementById("command").value="";
+
     })
 
 }
 
 
-
+///////////////////pulling an image//////////////////////
 
 function pull(){
+    var rev=document.getElementById('pullimage');
     var loading =document.getElementById("load");
     loading.style.display="block";
     var n = document.getElementById('pi');
@@ -387,8 +427,9 @@ function pull(){
         var gs1 = document.getElementById("mainOutput");
         gs1.innerHTML = res.message;
         msg =" ";
-        n.innerHTML = "pull image"
-        loading.style.display="none"
+        n.innerHTML = "pull image";
+        loading.style.display="none";
+        rev.value="";
        
     })
     var gs2 =fetch('http://127.0.0.1:5000/deleterevert');
@@ -406,6 +447,7 @@ function pull(){
    
 }
 
+////////////////////////////images//////////////////////////////
 
 function imag(){
     document.getElementById('dele').style.backgroundColor = "red";
@@ -456,6 +498,10 @@ function imag(){
             gs2.innerHTML = res.message;
            })
 }
+
+///////////////launch///////////////////
+
+
 function launch(){
     document.getElementById('la').style.backgroundColor =" rgb(51, 50, 50)";
     document.getElementById('la').style.color ="white";
@@ -495,6 +541,10 @@ function launch(){
     })
 
 }
+
+/////////////delete//////////////////
+
+
 function del(){
     document.getElementById('dea').style.backgroundColor = "red";
     document.getElementById('dea').style.color = "white";
@@ -549,9 +599,11 @@ function del(){
         var gs = document.getElementById("deletes");
         gs.innerHTML = res.message;
     })
-
-
 }
+
+////////////////logs///////////////
+
+
 function logs(){
     document.getElementById('lo').style.backgroundColor =" rgb(51, 50, 50)";
     document.getElementById('lo').style.color ="white";
@@ -591,6 +643,9 @@ function logs(){
      gs2.innerHTML = res.message;
     })
 }
+
+////////////execute////////////////
+
 function execute(){
     document.getElementById('e').style.backgroundColor =" rgb(51, 50, 50)";
     document.getElementById('e').style.color ="white";
@@ -632,11 +687,12 @@ function execute(){
        
     })
 
-    
-
-
-    
 }
+
+//////////////help////////////
+
+
+
 function help(){
     document.getElementById('h').style.backgroundColor =" rgb(51, 50, 50)";
     document.getElementById('h').style.color ="white";

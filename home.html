@@ -1,4 +1,4 @@
-<html lang ="en"> <!--doubt-->
+<html lang ="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,47 +7,158 @@
     <link rel ="icon" type="image/x-icon" href="./logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel ="stylesheet" href = "home.css">
+    <script src = "scripts.js"></script>
+    <script>
+        window.onload = function(){ 
+            console.log("Hello ") 
+            var gs=fetch('http://127.0.0.1:5000/') ;
+            gs.then(res => res.json()).then(res=>{
+                console.log(res)
+                var gs = document.getElementById("mainOutput");
+                gs.innerHTML = res.message;
+            })
+            console.log("Hello ") 
+            //console.log(gs)
+        }
+    </script>
+    <style>
+        .loader {
+          display:none;
+          position:relative;
+          top: 8vh;
+          left: 40vw;
+          border: 5px solid #8bc8d3;
+          border-radius: 50%;
+          border-top: 5px solid #3f4647;
+          width: 25px;
+          height: 25px;
+          -webkit-animation: spin 2s linear infinite; /* Safari */
+          animation: spin 2s linear infinite;
+        }
+        
+        /* Safari */
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+        
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        </style>
 </head>
     <body>
         <div class ="main">
         <div class = "one">
                 <div class = "image"><img height="50px" width="50px" class="logo" src="./logo.png" alt="logo"/></div>
-                <div class = "text"><u><b>Docker Management</b></u></div>
+                <div class = "text"><span class="gs-styles">Docker Management</span></div>
         </div>
+        <div class ="loader" id="load"></div>
         <div class = "two">
                 <div class ="two-one">
-                    <button class="images"><b>images</b></button>
-                    <button class="launch"><b>launch</b></button>
-                    <button class="delete"><b>delete</b></button>
-                    <button class="logs"><b>logs</b></button>
-                    <button class="execute"><b>execute</b></button>
-                    <button class="help"><b>help</b</button>
+                    <button onclick = "imag()" id = "i" class="images"><b>images</b></button>
+                    <button onclick = "launch()"id = "la" class="launch"><b>launch</b></button>
+                    <button onclick = "del()" id ="de" class="delete"><b>delete</b></button>
+                    <button onclick = "logs()" id = "lo" class="logs"><b>logs</b></button>
+                    <button onclick = "execute()" id = "e" class="execute"><b>execute</b></button>
+                    <button onclick = "help()" id = "h" class="help"><b>help</b</button>
                 </div>
 
-                <div class ="two-two">
+                <div class ="p">
+                <div id = "gs1" class ="two-two">
                     <div class ="second-one">
-                        <button class ="show"><b>show</b></button>
+                        <button onclick ="show()" id ="sh" class ="show"><b>show</b></button>
                     </div>
                    <div class ="second-two">
                     <div class ="pull"><b><u>pull</u></b></div>
-                    <div class ="imagename"> <input type="text" id="fname" name="fname" placeholder="     image name"></div>
-                   <button class="pullimage"> pull image</button></div>
+                    <div class ="imagename"> <input type="text" id="pullimage" name="fname" placeholder="     image name"></div>
+                   <button onclick = "pull()" id ="pi" class="pullimage"> pull image</button></div>
                    <div class ="second-three">
                     <div class ="delet"><b><u>delete</u></b></div>
-                    <div class ="imagename"> <input type="text" id="fname" name="fname" placeholder="     image name"></div>
-                   <button class="del"> delete</button></div>
+                    <div class ="imagename"> <input type="text" id="deleteimage" name="fname" placeholder="     image name"></div>
+                   <button onclick="dele()" id = "dele" class="del"> delete</button></div>
 
                    </div>
-               
+                   <div id = "gs2" class ="two-two">
+                    <div class ="button2">
+                     <div class ="pull"><b><u>configuration</u></b></div>
+                     <div class ="imagename"> <input type="text" id="runimage" name="fname" placeholder="   image name*"></div>
+                     <div class ="imagename"> <input type="text" id="containername" name="fname" placeholder="  container name"></div>
+                     <div class ="imagename"> <input type="text" id="hostport" name="fname" placeholder="   host port"></div>
+                     <div class ="imagename"> <input type="text" id="containerport" name="fname" placeholder="  container port"></div>
+                     <div class ="imagename"> <input type="text" id="volumepath" name="fname" placeholder="   volume path"></div>
+                    <button onclick = "laun()" id = "launc" class="laun">  launch</button>
+                    <button onclick ="status()" id = "status" class="laun"> status</button>
+                     
+                 </div></div>
+             
+ 
+           
+
+                    <div id = "gs3" class ="two-two">
+
+                        <div class ="stopcontainer">
+                         <div class ="pull"><b><u>stop container</u></b></div>
+                         <div class ="imagename"> <input type="text" id="stopcont" name="fname" placeholder="name"></div>
+                        <button onclick = "stop()" id = "st" class="pullimage">stop</button></div>
+                        <div class ="container">
+                         <div class ="delet"><b><u>container</u></b></div>
+                         <div class ="imagename"> <input type="text" id="deletename" name="fname" placeholder="name"></div>
+                        <button onclick="deletes()" id = "deletes" class="del"> delete</button>
+                        <button onclick= "dea()"id = "dea" class="delall"> delete all</button>
+                     </div>
+     
+                        </div>
+
+                        <div id = "gs4" class ="two-two">
+                            <div class ="logs1">
+                             <div class ="pull"><b><u>logs</u></b></div>
+                             <div class ="imagename"> <input type="text" id="logs" name="fname" placeholder="  container name"></div>
+                             
+                            <button onclick = "view()" id ="vl" class="laun">view logs</button>
+                            
+                             
+                         </div>
+                       
+                            </div>  
+         
+                    <div id = "gs5" class ="two-two">
+                        <div class ="cmds">
+                         <div class ="pull"><b><u>execute cmds</u></b></div>
+                         <div class ="imagename"> <input type="text" id="execname" name="fname" placeholder="  container name"></div>
+                         <div class ="imagename"> <input type="text" id="command" name="fname" placeholder="  command"></div>
+                        <button onclick ="exec()" id = "exe" class="laun">execute</button>
+                         
+                     </div>
+                 
+     
+                        </div>
+                            <div id = "gs6" class ="two-two">
+                                <div class ="cmds">
+                                 <div class ="pull"><b><u>help</u></b></div>
+                                 <div class ="imagename" id="mg"> <input type="text" id="mgmtcmd" name="fname" placeholder="  mgmt cmd"></div>
+                                 <button onclick = "helpp()" id = "hel" class="laun">help</button>
+                                 
+                             </div>
+                         
+             
+                                </div>          
                     
                 <div class ="two-three">
                     
-                   <input type="text" class ="output" id="fname" name="fname" placeholder="Here comes the output...."></div>
-                
+                   <div  class ="output"><p class = "here" id="mainOutput">Here comes the output...!</p></div>
+                </div>
                 </div></div> 
+                
+                
+                     
+                
+                 
+                
         
     </body>
 </html>

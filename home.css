@@ -1,25 +1,42 @@
 .main{
    
-    background-color :rgb(190, 241, 236);
+    background-color : rgb(29, 29, 29);
 }
 .body{
     margin :0;
 }
+.gs-styles{
+    text-decoration: underline;
+    color:rgb(15, 15, 15);
+    text-shadow : 1px 1px 2px rgb(129, 179, 224) , 0 0 25px rgb(135, 169, 201) , 0 0 5px rgb(134, 171, 206);
+}
+
+.here{
+    margin-top:3px;
+    height: 60vh;
+    overflow-y:auto;
+}
 .one{
     height : 9vh;
-    background-color :aliceblue;
+    background-color :rgb(131, 131, 131);
     display : flex;
-    
+    font-weight: bolder;
     justify-content: center;
    
-    box-shadow:  1px 8px 7px rgb(35, 52, 58);
+    box-shadow:  1px 8px 7px rgb(79,176, 221);
     
+}
+
+#gs1,#gs2,#gs3,#gs4,#gs5,#gs6{
+    display:none;
 }
 .two{
     
     display :flex;
     justify-content: center;
-    height:88vh;
+    }
+    .p{
+        display:flex;
     }
 .text{
     font-size: 5vh;
@@ -27,41 +44,45 @@
     margin-top:1.5vh;
     
 }
-.two-one,.two-two,.two-three{
+.two-one,.two-two{
         padding:30px;
         margin:20px;
 }
+.two-three{
+    padding:30px;
+}
 .two-two,.two-three{
         display:inline-block;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(51, 50, 50);
         width:200px; 
         
         text-align:center;
         justify-content:center;
         vertical-align:middle;
         align-items:center;
+        box-shadow:  1px 8px 7px rgb(80, 96, 104);
 }
 .two-two{
-    margin-top:14vh;
-    height:320px;
+    margin-top:12vh;
+    margin-right:10vh;
+    height:380px;
     width:200px;
     border-radius:10px;
     background-size: 350px;
-    box-shadow:  1px 1px 7px 7px rgb(100, 107, 109);
+    
 }
 .two-three{
-    margin-top:14vh;
-    height:320px;
+    margin-top:12vh;
+    height:380px;
     width:400px;
     border-radius:10px;
     background-size: 350px;
-    box-shadow:  1px 1px 7px 7px rgb(100, 107, 109);
+    
     
 }
 .two-one{
-    background-color: rgb(190, 241, 236);
-    margin-top:5vh;
-    height:350px;
+    background-color:  rgb(29, 29, 29);
+    margin-top:3vh;
     width:200px; 
     border-radius:25px;
     text-align:center;
@@ -71,11 +92,25 @@
     display:flex;
    flex-direction: column;
    justify-content: space-between;
-    
+  
 }
-.launch,.delete,.logs,.execute,.help{
-    margin-bottom :40px;
-    height : 1000vh;
+button{
+    height: 20vh;
+}
+.two-two:hover{
+    box-shadow: 0px 0px 5px 5px rgb(79,176, 221);
+    transition: all 500ms ease-out;
+
+}
+.two-three:hover{
+    box-shadow: 0px 0px 5px 5px rgb(79,176, 221);
+    transition: all 500ms ease-out;
+}
+
+.images,.launch,.delete,.logs,.execute,.help{
+    margin-top :30px;
+    margin-bottom:5px;
+    height : 7vh;
     width : 30vh;
     border-radius :10px;
     border-color:white;
@@ -84,100 +119,147 @@
     font-size: 20px;
     font-family:'Roboto';
     cursor:pointer;
-    box-shadow:5px 5px 0px 0px rgb(93, 139, 160);
+    box-shadow:  1px 8px 7px rgb(80, 96, 104);
 }
 .launch:hover{
-    background-size: 250px;
-    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+    box-shadow: 0px 0px 5px 5px rgb(9, 173, 255);
+    transition: all 500ms ease-out;
 }
 .delete:hover{
-    background-size: 250px;
-    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+    box-shadow: 0px 0px 5px 5px rgb(9,173, 255);
+    transition: all 500ms ease-out;
 }
 .logs:hover{
-    background-size: 250px;
-    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+    box-shadow: 0px 0px 5px 5px rgb(9,173, 255);
+    transition: all 500ms ease-out;
 }
 .execute:hover{
-    background-size: 250px;
-    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+    box-shadow: 0px 0px 5px 5px rgb(9,173, 255);
+    transition: all 500ms ease-out;
 }
 .help:hover{
-    background-size: 250px;
-    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+    box-shadow: 0px 0px 5px 5px rgb(9,173, 255);
+    transition: all 500ms ease-out;
 }
 
 
 
-.images{
-    margin-top :25px;
-    margin-bottom:40px;
-    height : 1000vh;
-    width : 30vh;
-    cursor:pointer;
-    border-radius :10px;
-    border-color:rgb(0, 0, 0);
-    background-color:rgb(0, 0, 0);
-    color : rgb(255, 255, 255);
-    font-size: 20px;
-    font-family:'Roboto';
-    box-shadow: 5px 5px 0px 0px rgb(80, 96, 104);;
-}
+
 .images:hover {
-    background-size: 250px;
-    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+    box-shadow: 0px 0px 5px 5px rgb(9,173, 255);
+    transition: all 500ms ease-out;
   }
   .pullimage:hover{
     background-size: 250px;
     box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
   }
   .del:hover{
-    background-size: 250px;
-    box-shadow: 0px 0px 5px 5px rgb(116, 2, 2);
+    background-color: rgb(3, 46, 37);
+    box-shadow: 0px 0px 5px 5px rgb(192, 7, 7);
+    transition: all 500ms ease-out;
+    
 
   }
+  .delall:hover{
+    background-color: rgb(6, 78, 63);
+    box-shadow: 0px 0px 5px 5px rgb(192,7,7);
+    transition: all 500ms ease-out;
+    
+    
+  }
 
-.second-two,.second-three{
-    background-color:rgb(190, 241, 236);
-    height: 20vh;
-    width:30vh;
-    background-size: 250px;
-    box-shadow:  1px 1px 1px 1px rgb(130, 188, 204);
-}
+
 .show:hover{
-    background-size: 250px;
-    box-shadow: 0px 0px 5px 5px rgb(7, 123, 177);
+    box-shadow: 0px 0px 5px 5px rgb(9,173, 255);
+    transition: all 500ms ease-out;
 }
 .show{
     margin-top :0vh;
     height : 7vh;
     width : 30vh;
     border-radius :10px;
-    border-color:rgb(255, 255, 255);
-    background-color:rgb(255, 255, 255);
-    color :  rgb(19, 92, 92);
+    border-color:rgb(51, 50, 50);
+    background-color:rgb(51, 50, 50);
+    color :  rgb(255, 255, 255);
     font-size: 20px;
     font-family:'Roboto';
     cursor:pointer;
-    box-shadow: 5px 5px 0px 0px rgb(93, 139, 160);;
+    box-shadow:  1px 8px 7px rgb(80, 96, 104);
 }
 .second-two{
     background-color:rgb(190, 241, 236);
-    margin-top:15px;
-    margin-left:10px;
+    margin-top:20px;
+    margin-left:3px;
     border-radius:10px;
+    height:22vh ;
+    box-shadow:  1px 8px 7px rgb(80, 96, 104);
+    padding:3px;
+}
+.logs1{
+    background-color:rgb(190, 241, 236);
+    margin-top:90px;
+    margin-left:3px;
+    border-radius:10px;
+    height:150px;
+    padding:3px;
 
 }
-.second-three{
-    margin-top:15px;
+.cmds{
     background-color:rgb(190, 241, 236);
-    margin-left:10px;
+    margin-top:90px;
+    margin-left:3px;
     border-radius:10px;
+    height:170px;
+    padding:3px;
+}
+.stopcontainer{
+    background-color:rgb(190, 241, 236);
+    margin-top:13px;
+    margin-left:3px;
+    border-radius:10px;
+    height:22vh;
+    box-shadow:  1px 8px 7px rgb(80, 96, 104);
+    padding:3px;
+    
+}
+.container{
+    background-color:rgb(190, 241, 236);
+    margin-top:20px;
+    margin-left:3px;
+    border-radius:10px;
+    height:30vh;
+    box-shadow:  1px 8px 7px rgb(80, 96, 104);
+    padding:3px;
+}
+.logs1,.cmds{
+    box-shadow:  1px 8px 7px rgb(80, 96, 104);
+}
+
+.button2{
+    background-color:rgb(190, 241, 236);
+    margin-top:10px;
+    margin-left:6px;
+    border-radius:10px;
+    height: 55vh;
+    width:30vh;
+    background-size: 250px;
+    box-shadow:  1px 8px 7px rgb(80, 96, 104);
+    padding:3px;
+}
+.second-three{
+    margin-top:20px;
+    background-color:rgb(190, 241, 236);
+    margin-left:3px;
+    border-radius:10px;
+    height:22vh;
+    box-shadow:  1px 8px 7px rgb(80, 96, 104);
+    padding:3px;
 }
 .pull,.delet{
     color:black;
     font-family:'Roboto';
-    font-size:4vh;
+    font-size:3vh;
+    margin-top:10px;
 }
 
 input{
@@ -189,25 +271,31 @@ input{
     font-size:15px;
     font-weight:bold ;
     border-color: rgb(255, 255, 255);
-    color:rgba(190, 190, 190, 0.863);
+    color:rgba(105, 105, 105, 0.863);
+    box-shadow:  1px 8px 7px rgb(80, 96, 104);
 }
 .output{
     width:65vh;
-    height:52vh;
-    margin-top:0px;
+    height:60.5vh;
+    padding-top: 4px;
+    padding-bottom:4px;
+    padding-left:4px;
+    padding-right:4px;
     border-radius:7px;
     font-family: 'Roboto';
-    font-size:15px;
+    font-size:20px;
     font-weight:bold ;
     background-color:rgb(190, 241, 236);
     border-color: rgb(255, 255, 255);
-    color:black;
+    color:rgb(75, 75, 75);
     text-align:center;
+    box-shadow:  1px 1px 3px 3px rgb(80, 96, 104);
+   
 }
-.pullimage{
+.pullimage,.laun{
     width:20vh;
     height:5vh;
-    margin-top:10px;
+    margin-top:15px;
     border-radius:7px;
     font-family: 'Roboto';
     font-size:15px;
@@ -215,12 +303,12 @@ input{
     background-color: black;
     color:white;
     cursor:pointer;
-    box-shadow: 5px 5px 0px 0px rgb(75, 81, 83);
+    box-shadow:  1px 8px 7px rgb(80, 96, 104);
 }
-.del{
+.delall,.del{
     width:20vh;
     height:5vh;
-    margin-top:10px;
+    margin-top:15px;
     border-radius:7px;
     font-family: 'Roboto';
     font-size:15px;
@@ -228,9 +316,10 @@ input{
     background-color: rgb(255, 23, 23);
     color:white;
     cursor:pointer;
-    box-shadow: 5px 5px 0px 0px rgb(75, 81, 83);
+    box-shadow:  1px 8px 7px rgb(80, 96, 104);
 
 }
+
 
 
 

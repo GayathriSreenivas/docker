@@ -98,7 +98,7 @@ def laun():
 		if(result.returncode==0):
 			return jsonify({"message":"Container launched successfully"})
 		else:
-			return jsonify({"message":"Container launched unsuccessful"})
+			return jsonify({"message":"Container launched unsuccessfull"})
 
 	elif(data['imagename']!='' and data['containername']!='' ):
 		cmd = 'docker run -dit --name {} {}'.format(data['containername'],data['imagename'])
@@ -107,10 +107,16 @@ def laun():
 		if(result.returncode==0):
 			return jsonify({"message":"Container launched successfully"})
 		else:
-			return jsonify({"message":"Container launched unsuccessful"})
+			return jsonify({"message":"Container launched unsuccessfull"})
 
 	elif(data['imagename']!='' ):
-		return jsonify({"message":"containername and hostport and containerport and volumepath was not set"})		
+		cmd = 'docker run -dit {}'.format(data['imagename'])
+		print(cmd)
+		result  = subprocess.run(cmd,shell = True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+		if(result.returncode==0):
+			return jsonify({"message":"container launched successfully"})
+		else:
+			return jsonify({"message":"invalid imagename"})		
 	else:
 		return jsonify({"message":"Data was not set"})		
 		
